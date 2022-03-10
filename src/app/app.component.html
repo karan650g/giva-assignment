@@ -1,0 +1,25 @@
+<mat-list #shoes>
+  <mat-list-item class = "headerCol">
+  <mat-card>
+    <span> Name    </span>
+ <span> Email </span>
+ <span>Status </span>
+ <span>Roles </span>
+ </mat-card>
+</mat-list-item>
+  <mat-list-item *ngFor="let shoe of dataSource">
+  <mat-card>
+   <span> {{shoe.name}}     </span>
+<span> {{shoe.mail}}</span>
+<span>
+  <mat-slide-toggle [checked]="shoe.disabled === true ? true : false"> </mat-slide-toggle>
+ </span>
+<span>{{shoe.roles}} </span>
+
+
+
+</mat-card>
+  </mat-list-item>
+
+</mat-list>
+
